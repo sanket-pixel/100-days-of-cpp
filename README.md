@@ -24,3 +24,11 @@ Track of all problems solved with C++ solutions and concise revision notes.
 | 6 | **Min Time Visiting All Points** | Time to move from (x1, y1) to (x2, y2) is `max(abs(x2 - x1), abs(y2 - y1))`. Sum over all pairs. |
 
 ---
+
+## ✅ Day 3 – May 22, 2025
+
+| # | Problem           | Summary                                                                                                                                      |
+|--:|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| 7 | **Spiral Matrix** | Get first row top++, get last column right--,until top<=bottom get last row bottom--,<br/> if left<=right get first column left++. Time:O(N) |
+
+---
