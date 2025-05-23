@@ -35,10 +35,9 @@ Track of all problems solved with C++ solutions and concise revision notes.
 
 ## ✅ Day 4 – May 23, 2025
 
-| # | Problem               | Summary                                                                               |
-|--:|-----------------------|---------------------------------------------------------------------------------------|
-| 7 | **Number of Islands** | Use BFS. Iterate over each element and call BFS if it is not 1 and not visited. <br/> | 
-
-|
+| # | Problem               | Summary                                                                         |
+|--:|-----------------------|---------------------------------------------------------------------------------|
+| 8 | **Number of Islands** | Use BFS. Iterate over each element and call BFS if it is not 1 and not visited. | 
+| 9 | **Maximum Profit**    | Use two pointers. Start with L=0, R=1. L is buying and R is selling.            | 
 
 ---
