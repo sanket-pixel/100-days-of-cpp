@@ -32,3 +32,13 @@ Track of all problems solved with C++ solutions and concise revision notes.
 | 7 | **Spiral Matrix** | Get first row top++, get last column right--,until top<=bottom get last row bottom--,<br/> if left<=right get first column left++. Time:O(N) |
 
 ---
+
+## ✅ Day 4 – May 23, 2025
+
+| # | Problem               | Summary                                                                               |
+|--:|-----------------------|---------------------------------------------------------------------------------------|
+| 7 | **Number of Islands** | Use BFS. Iterate over each element and call BFS if it is not 1 and not visited. <br/> | 
+
+|
+
+---
