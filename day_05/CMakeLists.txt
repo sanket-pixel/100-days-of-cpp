@@ -3,4 +3,4 @@ project(day_04)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(10_array_square 10_array_square.cpp)
+add_executable(10_sorted_squares 10_sorted_squares.cpp)
