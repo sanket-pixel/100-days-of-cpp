@@ -41,3 +41,11 @@ Track of all problems solved with C++ solutions and concise revision notes.
 | 9 | **Maximum Profit**    | Use two pointers. Start with L=0, R=1. L is buying and R is selling.            | 
 
 ---
+
+## ✅ Day 5 – May 24, 2025
+
+|  # | Problem            | Summary                                                                         |
+|---:|--------------------|---------------------------------------------------------------------------------|
+| 10 | **Sorted Squares** | Split positive and negative. Square each. Use two pointers to compare and merge |
+
+---
