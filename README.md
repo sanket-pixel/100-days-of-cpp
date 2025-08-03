@@ -49,3 +49,9 @@ Track of all problems solved with C++ solutions and concise revision notes.
 | 10 | **Sorted Squares** | Split positive and negative. Square each. Use two pointers to compare and merge |
 
 ---
+
+## ✅ Day 6 – August 3, 2025
+
+|  # | Problem  | Summary                                                                                                                                                                    |
+|---:|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 15 | **3Sum** | Sort the array. Use a `for` loop for the first number. Use two pointers (`left` and `right`) to find the remaining two numbers. Skip duplicates to ensure a unique result. |
