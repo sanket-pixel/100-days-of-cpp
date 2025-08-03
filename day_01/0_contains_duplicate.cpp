@@ -1,7 +1,7 @@
 #include <iostream>
 #include <map>
+#include <unordered_set>
 #include <vector>
-
 using namespace std;
 class Solution {
 public:
@@ -15,10 +15,20 @@ public:
     }
     return false;
   }
+
+  bool containsDuplicate2(vector<int> &nums) {
+    unordered_set<int> seen;
+    for (const auto num : nums) {
+      if (seen.count(num))
+        return true;
+      seen.insert(num);
+    }
+    return false;
+  }
 };
 
 int main() {
   Solution solution;
   std::vector<int> vec{1, 2, 2, 3, 4};
-  std::cout << solution.containsDuplicate(vec) << std::endl;
+  std::cout << solution.containsDuplicate2(vec) << std::endl;
 }

@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <unordered_map>
 #include <vector>
@@ -29,6 +30,22 @@ public:
     }
     return {};
   }
+
+  vector<int> small_count(vector<int> &nums) {
+    vector<int> sorted_nums = nums;
+    std::sort(sorted_nums.begin(), sorted_nums.end());
+    unordered_map<int, int> indices_map;
+    for (int i = 0; i < sorted_nums.size(); i++) {
+      if (indices_map.find(sorted_nums[i]) == indices_map.end()) {
+        indices_map[sorted_nums[i]] = i;
+      }
+    }
+    vector<int> smallest_vec(nums.size(), 0);
+    for (int i = 0; i < nums.size(); i++) {
+      smallest_vec[i] = indices_map[nums[i]];
+    }
+    return smallest_vec;
+  }
 };
 
 int main() {
@@ -40,4 +57,11 @@ int main() {
   for (int idx : two_sum_indices) {
     std::cout << idx << ", ";
   }
+
+  std::vector<int> vec2{8, 1, 2, 2, 3};
+  auto vec_small = solution.small_count(vec2);
+  for (const auto elem : vec_small) {
+    std::cout << elem << " ";
+  }
+  std::cout << std::endl;
 }

@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <deque>
 #include <iostream>
 #include <vector>
 
@@ -59,12 +60,29 @@ public:
     }
     return sorted_squares;
   }
+
+  vector<int> sortedSquares2(vector<int> &nums) {
+    vector<int> sorted_squares{};
+    int left_pointer = 0;
+    int right_pointer = nums.size() - 1;
+    while (left_pointer <= right_pointer) {
+      if (abs(nums[left_pointer]) < abs(nums[right_pointer])) {
+        sorted_squares.push_back(nums[right_pointer] * nums[right_pointer]);
+        right_pointer--;
+      } else {
+        sorted_squares.push_back(nums[left_pointer] * nums[left_pointer]);
+        left_pointer++;
+      }
+    }
+    reverse(sorted_squares.begin(), sorted_squares.end());
+    return sorted_squares;
+  }
 };
 
 int main() {
   Solution sol;
-  vector<int> input = {-5, -4, -1};
-  auto sorted_sqaures = sol.sortedSquares(input);
+  vector<int> input = {-4, -1, 0, 3, 10};
+  auto sorted_sqaures = sol.sortedSquares2(input);
   for (auto num : sorted_sqaures) {
     cout << num << " " << endl;
   }
