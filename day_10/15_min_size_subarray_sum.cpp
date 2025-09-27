@@ -9,29 +9,17 @@
 using namespace std;
 class Solution {
 public:
-  int minSubArrayLen(int target, vector<int> &nums) {
-    int l = 0;
-    int min_sub_length = INT_MAX;
-    int total = 0;
-    for (int r = 0; r < nums.size(); r++) {
-      total += nums[r];
-      while (total >= target) {
-        min_sub_length = min(min_sub_length, r - l + 1);
-        total = total - nums[l];
-        l++;
-      }
+  int singleNumber(vector<int> &nums) {
+    int result = 0;
+    for (int i = 0; i < nums.size(); i++) {
+      result = result ^ nums[i];
     }
-    if (min_sub_length == INT_MAX) {
-      return 0;
-    } else {
-      return min_sub_length;
-    }
+    return result;
   }
 };
 int main() {
   Solution sol;
-  vector<int> input = {1, 2, 3, 4, 5};
-  int target = 15;
-  int minimum_subarray_length = sol.minSubArrayLen(target, input);
-  std::cout << "Minimum sub array length is " << minimum_subarray_length;
+  vector<int> input = {4, 1, 2, 1, 2};
+  int single_number = sol.singleNumber(input);
+  std::cout << "Single number is " << single_number;
 }
